@@ -9,7 +9,7 @@ function useDataFetching( dataSource ) {
         async function fetchData() {
             try {
                 const data = await fetch(dataSource);
-                const result = data.json();
+                const result = await data.json();
                 if (result) {
                     setData(result);
                     setLoading(false);
